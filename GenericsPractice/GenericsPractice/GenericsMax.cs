@@ -24,7 +24,7 @@ namespace GenericsPractice
             {
                 return thirdNum;
             }
-            return secondNum;
+            return thirdNum;
         }
     }
 }
