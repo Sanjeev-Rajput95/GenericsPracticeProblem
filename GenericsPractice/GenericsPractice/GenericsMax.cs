@@ -8,7 +8,8 @@ namespace GenericsPractice
 {
     public class GenericsMax
     {
-        public static string MaxIntNumber (string firstNum, string secondNum, string thirdNum)
+
+        public static T MaxIntNumber<T> (T firstNum, T secondNum, T thirdNum) where T : IComparable
         {
             if (firstNum.CompareTo(secondNum) > 0 && firstNum.CompareTo(thirdNum) > 0 || firstNum.CompareTo(secondNum) >= 0 && firstNum.CompareTo(thirdNum) > 0 || firstNum.CompareTo(secondNum) > 0 && firstNum.CompareTo(thirdNum) >= 0 )
             {
@@ -24,7 +25,7 @@ namespace GenericsPractice
             {
                 return thirdNum;
             }
-            return thirdNum;
+            return firstNum;
         }
     }
 }
